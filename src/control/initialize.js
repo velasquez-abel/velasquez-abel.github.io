@@ -1,3 +1,3 @@
 'use strict';
-// main namespace pl = "public library"
-var pl = { model:{}, view:{}, ctrl:{} };
+// main namespace sl = "scale library"
+var sl = { model:{}, view:{}, ctrl:{} };

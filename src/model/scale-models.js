@@ -19,7 +19,7 @@ ScaleModel.convertDataToScaleModel = function( row ){
 
 ScaleModel.loadAll = function( ){
 	//load all from json remote file
-	var key="", keys=[], data="", scale_models={}, i=0;  
+	var key="", keys=[], data="", scale_models={}, i=0, url="/data/scale-models.json";
 	try{
 		fetch( url )
 			.then( resp => resp.json() )
