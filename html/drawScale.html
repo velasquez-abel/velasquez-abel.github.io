@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<script src="../data/scaleList.json" type="text/javascript"></script>
+		<script src="../data/notesData.json" type="text/javascript"></script>
+		<script src="../data/tuningModels.json" type="text/javascript"></script>
+		<script src="../src/control/initialize.js" type="text/javascript"></script>
+		<script src="../src/model/TuningModel.js" type="text/javascript"></script>
+		<script src="../src/model/Note.js" type="text/javascript"></script>
+		<script src="../src/model/ScaleModel.js" type="text/javascript"></script>
+		<script src="../src/view/drawScale.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			window.addEventListener("load" , sm.view.drawScale.setupUserInterface);
+		</script>
+	</head>
+	<body>
+	
+<h1>Scale Display tool</h1>
+
+<table id="">
+	<tr>
+		<th>Root Note</th>
+		<td>
+			<select name="RootNote" id="RootNote" size="1"></select>
+		</td>
+	</tr>
+	<tr>
+		<th>Scale</th>
+		<td>
+			<select name="Scale" id="Scale" size="1"></select>
+		</td>
+	</tr>
+	<tr>
+		<th>Tuning</th>
+		<td>
+			<select name="Tuning" id="Tuning" size="1"></select>
+		</td>
+	</tr>
+
+</table>
+
+<table id="Fretboard" border="1">
+</table>
+
+		<!--
+		<h1>scale models</h1>
+		<table id="scalemodels">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>name</th>
+					<th>steps</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		-->
+	</body>
+</html>

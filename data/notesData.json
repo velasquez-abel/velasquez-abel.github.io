@@ -1,0 +1,86 @@
+notesData = `[
+	{
+		"note" : {
+			"id" : 1 , 
+			"name": "C"
+		}
+
+	}, 
+		{
+		"note" : {
+			"id" : 2 , 
+			"name": "C# / Db"
+		}
+
+	},
+	{
+		"note" : {
+			"id" : 3 , 
+			"name": "D"
+		}
+
+	},
+	{
+		"note" : {
+			"id" : 4 , 
+			"name": "D# / Eb"
+		}
+
+	},
+	{
+		"note" : {
+			"id" : 5 , 
+			"name": "E"
+		}
+
+	}, 
+		{
+		"note" : {
+			"id" : 6 , 
+			"name": "F"
+		}
+
+	},
+	{
+		"note" : {
+			"id" : 7 , 
+			"name": "F# / Gb"
+		}
+
+	},
+	{
+		"note" : {
+			"id" : 8 , 
+			"name": "G"
+		}
+
+	},
+	{
+		"note" : {
+			"id" : 9 , 
+			"name": "G# / Ab"
+		}
+
+	}, 
+		{
+		"note" : {
+			"id" : 10 , 
+			"name": "A"
+		}
+
+	},
+	{
+		"note" : {
+			"id" : 11 , 
+			"name": "A# / Bb"
+		}
+
+	},
+	{
+		"note" : {
+			"id" : 12 , 
+			"name": "B"
+		}
+
+	}
+]`;

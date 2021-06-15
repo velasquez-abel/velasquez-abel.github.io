@@ -1,0 +1,164 @@
+scaleList = `[ 
+	{
+		"scale" : {
+			"id" : "1" , 
+			"name" : "Major / Ionian" , 
+			"semitoneSteps": [2,2,1,2,2,2,1]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "2" , 
+			"name" : "Major Chord" , 
+			"semitoneSteps": [4,3]
+		}
+	} ,	
+	{
+		"scale" : {
+			"id" : "3" , 
+			"name" : "Dorian" , 
+			"semitoneSteps": [2,1,2,2,2,1,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "4" , 
+			"name" : "Phrygian" , 
+			"semitoneSteps": [1,2,2,2,1,2,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "5" , 
+			"name" : "Lydian" , 
+			"semitoneSteps": [2,2,2,1,2,2,1]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "6" , 
+			"name" : "Mixolydian" , 
+			"semitoneSteps": [2,2,1,2,2,1,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "7" , 
+			"name" : "Aeolian" , 
+			"semitoneSteps": [2,1,2,2,1,2,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "8" , 
+			"name" : "Locrian" , 
+			"semitoneSteps": [1,2,2,1,2,2,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "9" , 
+			"name" : "Major Pentatonic" , 
+			"semitoneSteps": [2,2,3,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "10" , 
+			"name" : "Minor Pentatonic" , 
+			"semitoneSteps": [3,2,2,3]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "11" , 
+			"name" : "Major Blues" , 
+			"semitoneSteps": [2,1,1,3,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "12" , 
+			"name" : "Minor Blues" , 
+			"semitoneSteps": [3,1,1,1,1,3]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "13" , 
+			"name" : "Harmonic Minor" , 
+			"semitoneSteps": [2,1,2,2,1,2,1]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "14" , 
+			"name" : "Jazz Melodic Minor" , 
+			"semitoneSteps": [2,1,2,2,2,2,1]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "15" , 
+			"name" : "Dorian b9" , 
+			"semitoneSteps": [1,2,2,2,2,1,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "16" , 
+			"name" : "Lydian Augmented" , 
+			"semitoneSteps": [2,2,2,2,1,2,1]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "17" , 
+			"name" : "Lydian Dominant" , 
+			"semitoneSteps": [2,2,2,1,2,1,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "18" , 
+			"name" : "Mixolydian b6" , 
+			"semitoneSteps": [2,2,1,2,1,2,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "19" , 
+			"name" : "Aeolian b5" , 
+			"semitoneSteps": [2,1,2,1,2,2,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "20" , 
+			"name" : "Altered" , 
+			"semitoneSteps": [1,2,1,2,2,2,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "21" , 
+			"name" : "Diminished (Whole-Half)" , 
+			"semitoneSteps": [2,1,2,1,2,1,2,1]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "22" , 
+			"name" : "Diminished (Half-Whole)" , 
+			"semitoneSteps": [1,2,1,2,1,2,1,2]
+		}
+	} ,
+	{
+		"scale" : {
+			"id" : "23" , 
+			"name" : "Whole Tone" , 
+			"semitoneSteps": [2,2,2,2,2,2]
+		}
+	} 
+	
+]`;

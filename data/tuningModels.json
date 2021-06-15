@@ -1,0 +1,160 @@
+tuningModelsData = `[
+	{
+		"tuningModel" : {
+			"id" : "1" , 
+			"name" : "Six String Guitar" , 
+			"strings" : [
+				{ 
+					"string" : {
+						"position" : "1" , 
+						"rootNote" : "E"
+					}
+				}, 
+				{ 
+					"string" : {
+						"position" : "2" , 
+						"rootNote" : "B"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "3" , 
+						"rootNote" : "G"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "4" , 
+						"rootNote" : "D"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "5" , 
+						"rootNote" : "A"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "6" , 
+						"rootNote" : "E"
+					}
+				}
+			]
+		}
+	} , 
+	{
+		"tuningModel" : {
+			"id" : "2" , 
+			"name" : "Six String Bass Guitar" , 
+			"strings" : [
+				{ 
+					"string" : {
+						"position" : "1" , 
+						"rootNote" : "C"
+					}
+				}, 
+				{ 
+					"string" : {
+						"position" : "2" , 
+						"rootNote" : "G"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "3" , 
+						"rootNote" : "D"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "4" , 
+						"rootNote" : "A"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "5" , 
+						"rootNote" : "E"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "6" , 
+						"rootNote" : "B"
+					}
+				}
+			]
+		}
+	} , 
+	{
+		"tuningModel" : {
+			"id" : "3" , 
+			"name" : "Five String Bass Guitar" , 
+			"strings" : [
+				{ 
+					"string" : {
+						"position" : "1" , 
+						"rootNote" : "G"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "2" , 
+						"rootNote" : "D"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "3" , 
+						"rootNote" : "A"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "4" , 
+						"rootNote" : "E"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "5" , 
+						"rootNote" : "B"
+					}
+				}
+			]
+		}
+	} ,
+	{
+		"tuningModel" : {
+			"id" : "4" , 
+			"name" : "Four String Bass Guitar" , 
+			"strings" : [
+				{ 
+					"string" : {
+						"position" : "1" , 
+						"rootNote" : "G"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "2" , 
+						"rootNote" : "D"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "3" , 
+						"rootNote" : "A"
+					}
+				},
+ 				{ 
+					"string" : {
+						"position" : "4" , 
+						"rootNote" : "E"
+					}
+				}
+			]
+		}
+	} 
+]`;

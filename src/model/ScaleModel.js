@@ -1,39 +1,47 @@
-function ScaleModel( scale_model ){
-	this.id = scale_model.id;
-	this.name = scale_model.name;
-	this.semitoneSteps = scale_model.semitoneSteps;
+ScaleModel = function(){
 };
-
-function ScaleModel( _id , _name , _steps ){
+ 
+ScaleModel = function(_id , _name , _steps ){
 	this.id = _id;
 	this.name = _name;
 	this.semitoneSteps = _steps;
+	//console.log("function ScaleModel: created id="+_id + "; name=" + _name);
+	return this;
 };
 
-ScaleModel.instances = {};  // initially an empty associative array
+ScaleModel = function( row ){
+	//console.log( "ScaleModel( row ) -> row elements to create an ScaleModel: " + row );
+	this.id = row.id;
+	this.name = row.name;
+	this.semitoneSteps = row.semitoneSteps;            
+	//console.log( "ScaleModel( row ): id=" + row.id + "; name=" + row.name + "; semitoneSteps=" + row.semitoneSteps );
+	return this;
+};
 
-ScaleModel.convertDataToScaleModel = function( row ){
-	var scaleModel = new ScaleModel( row );
+ScaleModel.instances = {};
+
+ScaleModel.convertData = function(row){
+   
+	//var scaleModel = new ScaleModel( row.id , row.name, row.semitoneSteps );
+	var scaleModel = new ScaleModel( row )
+	//console.log( "ScaleModel.convertData = function(row): id=" + scaleModel.id + "; name=" + scaleModel.name + "; semitoneSteps=" + scaleModel.semitoneSteps );
 	return scaleModel;
-}
+   
+	//return new ScaleModel( row.id , row.name, row.semitoneSteps );
+};
 
-ScaleModel.loadAll = function( ){
-	//load all from json remote file
-	var key="", keys=[], data="", scale_models={}, i=0, url="/data/scale-models.json";
-	try{
-		fetch( url )
-			.then( resp => resp.json() )
-			.then( data => console.log( "obtained : " + data ))
-	}//try
-	catch (e){
-		
-	}//catch
-	if (data) {
-    scale_models = JSON.parse( data );
-    keys = Object.keys( scale_models );
-    console.log( keys.length +" scale models loaded.");
-    for (i=0; i < keys.length; i++) {
-      key = keys[i];
-      ScaleModels.instances[key] = ScaleModel.convertDataToScaleModel( scale_models[key]);
-  	}
-}
+ScaleModel.loadAll = function(){
+	var data = scaleList;
+	if(data){
+		scaleModels = JSON.parse( data );
+		keys = Object.keys( scaleModels );
+		console.log( keys.length + " scale models loaded. " );
+		for( i=0; i<keys.length; i++ ){
+			key = keys[i];
+			row = scaleModels[key].scale;
+			//console.log( "ScaleModel.loadAll = function() -> row.id: " + row.id + "; row.name:" + row.name + "; semitoneSteps:" + row.semitoneSteps  );
+			ScaleModel.instances[row.id] = ScaleModel.convertData( row );
+		}
+	}
+};
+ 
