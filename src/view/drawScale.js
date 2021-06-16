@@ -6,11 +6,11 @@ sm.view.drawScale = {
 		//fill up the select for RootNote options
 		selectRootNote = document.querySelector("select#RootNote");
 		var i=0, keys = [];
-		Note.loadAll();
-		keys = Object.keys(Note.instances);
+		Notes.loadAll();
+		keys = Object.keys(Notes.instances);
 		for(i=0; i<keys.length; i++){
 			var key = keys[i];
-			var data = Note.instances[key];
+			var data = Notes.instances[key];
 			//daySelect.options[daySelect.options.length] = new Option('Text 1', 'Value1');
 			selectRootNote.options[selectRootNote.options.length] = new Option( data.name , data.id );
 		}                             
@@ -113,18 +113,18 @@ sm.view.drawScale = {
 			//stringSelect.setAttribute("onchange", function(){sm.view.drawScale.changeStringTuning();});
 			 stringSelect.addEventListener(
 				'change',
-				function() { sm.view.drawScale.changeStringTuning( this.value , this.id , i ); },
+				function() { sm.view.drawScale.changeStringTuning( this.value , this.id ); },
 				false
 			);
 			stringSelect.setAttribute("id", "string_"+i);
 			
 			cell.appendChild( stringSelect );
 			var j=0, keys = [];
-			Note.loadAll();
-			keys = Object.keys(Note.instances);
+			Notes.loadAll();
+			keys = Object.keys(Notes.instances);
 			for(j=0; j<keys.length; j++){
 				var key = keys[j];
-				var data = Note.instances[key];
+				var data = Notes.instances[key];
 				var option = new Option( data.name , data.id );
 				if( chosenModel.strings[i].string.rootNote == data.name ){
 					option.setAttribute("selected", "selected");
@@ -161,14 +161,14 @@ sm.view.drawScale = {
 			
 			noteSelect = document.getElementById( 'string_'+i );
 			stringNote = eval( noteSelect.value );
-			notesLen = ( Object.keys(Note.instances)).length;
+			notesLen = ( Object.keys(Notes.instances)).length;
 			for(j=1; j<=12; j++){
 				startNote = stringNote + j ;
 				startNote = ((startNote == 12) || (startNote == 24))?12: ( ( startNote > notesLen)?( startNote % notesLen ):startNote );
 				//paint the note
 				theDiv = document.getElementById( 'S'+ i + '_F' + j  );
 				isPainted = noteArray.includes( startNote );
-				theDiv.innerHTML = (isPainted)?Note.instances[ startNote ].name : ' ';
+				theDiv.innerHTML = (isPainted)?Notes.instances[ startNote ].name : ' ';
 			}
 		}
 		
@@ -176,22 +176,23 @@ sm.view.drawScale = {
 	
 	changeStringTuning( theValue , theID ){
 		var theScale;
+		rootNote = document.querySelector("select#RootNote").value;
 		theScale = document.querySelector("select#Scale").value;
 		
 		theString = theID.replace('string_' , '' );
 		
 		var noteArray;
-		noteArray = sm.view.drawScale.collectNotes( theScale , theValue );
+		noteArray = sm.view.drawScale.collectNotes( theScale , rootNote );
 		i = eval(theValue);
 		stringNote = i;
-		notesLen = ( Object.keys(Note.instances)).length;
+		notesLen = ( Object.keys(Notes.instances)).length;
 		for(j=1; j<=12; j++){
 			startNote = stringNote + j ;
 			startNote = ((startNote == 12) || (startNote == 24))?12: ( ( startNote > notesLen)?( startNote % notesLen ):startNote );
 			//paint the note
 			theDiv = document.getElementById( 'S'+ theString + '_F' + j  );
 			isPainted = noteArray.includes( startNote );
-			theDiv.innerHTML = (isPainted)?Note.instances[ startNote ].name : ' ';
+			theDiv.innerHTML = (isPainted)?Notes.instances[ startNote ].name : ' ';
 		}		
 	} , 
 	
@@ -213,7 +214,7 @@ sm.view.drawScale = {
 		noteArray = new Array();
 		noteArray.push( note );
 		//collecting all remaining notes
-		notesLen = ( Object.keys(Note.instances)).length;
+		notesLen = ( Object.keys(Notes.instances)).length;
 		while( index < len ){
 			steps = chosenScale.semitoneSteps[index];
 			note = ( note + steps );

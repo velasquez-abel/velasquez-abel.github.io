@@ -1,34 +1,34 @@
-//Note.js
-Note = function(){
+//Notes.js
+Notes = function(){
 };
  
-Note = function(_id , _name ){
+Notes = function(_id , _name ){
 	this.id = _id;
 	this.name = _name;
 };
  
-Note = function( row ){
+Notes = function( row ){
 	this.id = row.id;
 	this.name = row.name;
 };
  
-Note.instances = {};
+Notes.instances = {};
  
-Note.convertData = function(row){
-	var note = new Note( row );
+Notes.convertData = function(row){
+	var note = new Notes( row );
 	return note;
 }
  
-Note.loadAll = function(){
+Notes.loadAll = function(){
 	var data = notesData;
 	if(data){
-		Notes = JSON.parse( data );
-		keys = Object.keys( Notes );
+		Notes_ = JSON.parse( data );
+		keys = Object.keys( Notes_ );
 		console.log( keys.length + " notes loaded. " );
 		for( i=0; i<keys.length; i++ ){
 			key = keys[i];
-			row = Notes[key].note;
-			Note.instances[row.id] = Note.convertData( row );
+			row = Notes_[key].note;
+			Notes.instances[row.id] = Notes.convertData( row );
 		}
 	}
 }
