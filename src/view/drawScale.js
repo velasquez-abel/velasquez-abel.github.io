@@ -230,6 +230,42 @@ sm.view.drawScale = {
 		th = document.createElement('th');
 		th.innerHTML = _text;
 		return th;
+	},
+	
+	drawScaleNotes: function(){
+		var theNote , theScale;
+		var theScaleNotes;
+		
+		theNote = document.querySelector("select#RootNote").value;
+		theScale = document.querySelector("select#Scale").value;
+		theScaleNotes = document.querySelector("table#ScaleNotes");
+	    
+		//clearing the scale notes aread
+		while(theScaleNotes.rows.length) {
+			theScaleNotes.deleteRow(0);
+		}
+	   
+	   	//collecting notes for painting the scale:
+		var noteArray;
+		noteArray = sm.view.drawScale.collectNotes( theScale , theNote );
+		
+		//painting the header
+		var header = theScaleNotes.createTHead();
+		var row = header.insertRow(0);
+		var i=0;len = noteArray.length;
+		for(i=0; i<len; i++){
+			row.appendChild( sm.view.drawScale.createTH( (i+1) ) );
+		}
+	   
+		//adding the header row
+		var header = theScaleNotes.createTHead();
+		var row = header.insertRow(0);
+		var i=0;len = noteArray.length;
+		for(i=0; i<len; i++){
+			row.appendChild( sm.view.drawScale.createTH(  ) );
+		}
+		
+		
 	}
 };
  
